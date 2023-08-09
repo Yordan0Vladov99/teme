@@ -1,0 +1,129 @@
+.FieldForm {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  max-width: 60ch;
+  background-color: white;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+.FieldForm h1 {
+  text-align: left;
+  margin: 0;
+  font-size: 24px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.input-container.invalid > input {
+  border-color: hsl(0, 100%, 74%);
+}
+
+.input-container.invalid > svg {
+  display: inline;
+}
+
+.input-container > svg {
+  display: none;
+  position: absolute;
+  margin-left: 90%;
+}
+
+.FieldForm input,
+select {
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.FieldForm select {
+  background-color: white;
+}
+
+.FieldForm input[type="submit"],
+.exportButton {
+  cursor: pointer;
+  text-align: center;
+  padding: 0 1ch;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: hsl(154, 59%, 51%);
+}
+
+.exportButton {
+  padding: 1ch;
+  border-radius: 5px;
+}
+.FieldForm > p {
+  color: hsl(246, 25%, 77%);
+  font-size: 16px;
+  text-align: center;
+}
+
+.FieldForm > p a {
+  all: unset;
+  cursor: pointer;
+}
+
+.FieldForm > p a b {
+  color: hsl(0, 100%, 74%);
+}
+
+.FieldForm .error-msg {
+  color: hsl(0, 100%, 74%);
+  margin-left: auto;
+}
+
+.colorFields {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+.colorFields > li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.colorFields > li > h1 {
+  width: 20ch;
+  text-align: center;
+  word-break: break-all;
+}
+.colorFieldValue {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.cField > img {
+  visibility: hidden;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.cField:hover > img {
+  visibility: visible;
+}
+
+.cField > input {
+  display: none;
+}

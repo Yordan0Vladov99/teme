@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+.App {
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  padding-top: 200px;
+  width: 80%;
+}
+
+.greetingPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greetingPrompt > h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.filePrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.break {
+  margin: 0;
+}
+
+.filePrompt a {
+  all: unset;
+}
+.filePrompt h2 {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.greetingPrompt {
+  animation: fadeAnimation ease 1s;
+}
+
+#uploadFile {
+  display: none;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.color {
+  padding: 20px;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.color:hover svg {
+  visibility: visible;
+}
+.color svg {
+  visibility: hidden;
+  cursor: pointer;
+  width: 1.5rem;
+}
+
+.color > input {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.buttons > * {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #8fb3ff;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+@keyframes fadeAnimation {
+  0% {
+    margin-right: 50px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .colors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .colors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .colors {
+    grid-template-columns: 1fr;
+  }
+}
