@@ -115,7 +115,7 @@ function Visualizer() {
         type="file"
         name="uploadFile"
         onChange={(e) => changeActiveFile(e.target.files)}
-        accept="text/plain"
+        accept="text/plain,.json,.xml,.html,.css,.scss"
       />
     </div>
   );
