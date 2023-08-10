@@ -15,9 +15,10 @@ const SearchArea = (props: SearchProps) => {
     let res: Text[] = [];
     let unparsedText = "";
     let occurs = 0;
-    for (let i = 0; i < text.length - 7; i++) {
+    let i = 0;
+    for (; i < text.length - 7; i++) {
       const subsStr = text.substring(i, i + 7);
-      if (subsStr === searched) {
+      if (subsStr.toLowerCase() === searched) {
         res.push(unparsedText);
         res.push(<b id={`#occurrence-${occurs}`}>{searched}</b>);
         occurs += 1;
@@ -27,7 +28,7 @@ const SearchArea = (props: SearchProps) => {
         unparsedText += text[i];
       }
     }
-    unparsedText += text.substring(text.length - 7);
+    unparsedText += text.substring(i);
     res.push(unparsedText);
     return res;
   };

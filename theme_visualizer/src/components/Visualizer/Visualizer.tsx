@@ -16,7 +16,11 @@ function Visualizer() {
 
   useEffect(() => {
     const matches: string[] = file?.match(colorRegEx) || [];
-    setColors(new Map(matches.map((match) => [match, match])));
+    setColors(
+      new Map(
+        matches.map((match) => [match.toLowerCase(), match.toLowerCase()])
+      )
+    );
   }, [file]);
 
   const changeActiveFile = async (files: FileList | null) => {
@@ -50,17 +54,18 @@ function Visualizer() {
     const oldFile = file || "";
     let newFile = "";
 
-    for (let i = 0; i < oldFile.length - 7; i++) {
+    let i = 0;
+    for (; i < oldFile.length - 7; i++) {
       const subsStr = oldFile.substring(i, i + 7);
       if (colorRegEx.test(subsStr)) {
-        newFile += colors.get(subsStr);
+        newFile += colors.get(subsStr.toLowerCase());
         i += 6;
       } else {
         newFile += oldFile[i];
       }
     }
 
-    newFile += oldFile.substring(oldFile.length - 7);
+    newFile += oldFile.substring(i);
 
     return newFile;
   };
