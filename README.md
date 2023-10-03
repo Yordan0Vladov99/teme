@@ -1,5 +1,9 @@
 <p align="center"><img width=60% src="./media/logos/png/logo-no-background.png"></p>
 
+[!Node Version](https://badgen.net/badge/nodejs/v20.7.0/blue)
+[!React Version](https://badgen.net/badge/react/v18.2.0/red)
+[!License](https://badgen.net/badge/License/MIT/green)
+
 ## Basic Overview
 
 Teme is a web application designed for visualizing color themes through uploaded text files. It renders colors in HEX format, such as #2596be, within a grid layout on the webpage.
@@ -14,7 +18,7 @@ For creating new themes, Teme offers a user-friendly tool that facilitates theme
 
 <img src="./media/p3.gif" width=100%>
 
-## How to use
+## Usage
 
 ```bash
 git clone https://github.com/Yordan0Vladov99/teme.git
