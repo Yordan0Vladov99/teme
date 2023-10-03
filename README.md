@@ -1,8 +1,12 @@
 <p align="center"><img width=60% src="./media/logos/png/logo-no-background.png"></p>
 
-[!Node Version](https://badgen.net/badge/nodejs/v20.7.0/blue)
-[!React Version](https://badgen.net/badge/react/v18.2.0/red)
-[!License](https://badgen.net/badge/License/MIT/green)
+<div align="center">
+
+![Node Version](https://badgen.net/badge/nodejs/v20.7.0/blue)
+![React Version](https://badgen.net/badge/react/v18.2.0/red)
+![License](https://badgen.net/badge/License/MIT/green)
+
+</div>
 
 ## Basic Overview
 
@@ -25,6 +29,4 @@ git clone https://github.com/Yordan0Vladov99/teme.git
 cd theme_visualizer
 npm install
 npm run dev
-
-
 ```
